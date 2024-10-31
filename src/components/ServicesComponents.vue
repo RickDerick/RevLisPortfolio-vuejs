@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-gradient-to-br from-blue-900 to-indigo-900 py-16 px-4 sm:px-6 lg:px-8">
+    <section class="bg-gradient-to-br from-primarycolor to-primarycolor/80 py-16 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
         <h2 class="text-4xl font-extrabold text-white text-center mb-12">Our Services</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">

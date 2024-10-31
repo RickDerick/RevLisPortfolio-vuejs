@@ -1,10 +1,10 @@
 <template>
-  <footer class="bg-gradient-to-br from-blue-900 to-indigo-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+  <footer class="bg-primarycolor text-white py-12 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
       <!-- Logo and Company Info -->
       <div class="space-y-4">
         <img :src="LogoPngClear" alt="Company Logo" class="h-40" />
-        <p class="text-sm text-gray-300">Empowering businesses with innovative solutions.</p>
+        <p class="text-sm text-white">Empowering businesses with innovative solutions.</p>
       </div>
 
       <!-- Explore Section -->
@@ -12,7 +12,7 @@
         <h3 class="text-lg font-semibold mb-4">Explore</h3>
         <ul class="space-y-2">
           <li v-for="link in exploreLinks" :key="link.text">
-            <a :href="link.url" class="text-gray-300 hover:text-white transition duration-300 ease-in-out">{{ link.text }}</a>
+            <a :href="link.url" class="text-white hover:text-white transition duration-300 ease-in-out">{{ link.text }}</a>
           </li>
         </ul>
       </div>
@@ -21,7 +21,7 @@
       <div>
         <h3 class="text-lg font-semibold mb-4">Connect With Us</h3>
         <div class="flex space-x-4">
-          <a v-for="social in socialLinks" :key="social.name" :href="social.url" class="text-gray-300 hover:text-white transition duration-300 ease-in-out">
+          <a v-for="social in socialLinks" :key="social.name" :href="social.url" class="text-white hover:text-white transition duration-300 ease-in-out">
             <component :is="social.icon" class="w-6 h-6" />
             <span class="sr-only">{{ social.name }}</span>
           </a>
@@ -36,7 +36,7 @@
             <label for="email" class="sr-only">Email address</label>
             <input v-model="email" type="email" id="email" required
               placeholder="Enter your email"
-              class="w-full px-3 py-2 bg-blue-800 text-white placeholder-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out"
+              class="w-full px-3 py-2 bg-blue-600 text-white placeholder-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ease-in-out"
               :class="{ 'border-red-500': emailError }"
             >
             <p v-if="emailError" class="mt-2 text-sm text-red-400">{{ emailError }}</p>
@@ -51,8 +51,8 @@
     </div>
 
     <!-- Copyright -->
-    <div class="mt-8 pt-8 border-t border-blue-800 text-center text-sm text-gray-400">
-      © {{ new Date().getFullYear() }} Treyonks. All rights reserved.
+    <div class="mt-8 pt-8 border-t border-blue-800 text-center text-sm text-white">
+      © {{ new Date().getFullYear() }} Revlis Engineering Ltd. All rights reserved.
     </div>
   </footer>
 </template>

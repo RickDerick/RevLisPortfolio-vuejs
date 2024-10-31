@@ -6,7 +6,7 @@
         <div class="flex-shrink-0">
           <a href="/" class="text-2xl font-bold text-gray-800 hover:text-indigo-600 transition duration-300 flex">
             <img :src="logo" alt="treyonks technology limited logo" class="h-10">
-            <span class="text-2xl font-bold text-gray-800 hover:text-indigo-600 transition duration-300">Treyonks Limited</span>
+            <span class="text-2xl font-bold text-gray-800 hover:text-indigo-600 transition duration-300">Revlis Engineering Limited</span>
           </a>
         </div>
 
@@ -20,10 +20,10 @@
           </a>
         </nav>
 
-        <!-- CTA Button -->
+        <!-- Search Icon -->
         <div class="hidden md:block">
-          <button @click="requestDemo" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
-            REQUEST A DEMO
+          <button @click="openSearch" class="text-gray-600 hover:text-primary p-2 rounded-full transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50">
+            <SearchIcon class="h-6 w-6" />
           </button>
         </div>
 
@@ -48,35 +48,33 @@
         <div v-if="isMobileMenuOpen" class="md:hidden">
           <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <a v-for="item in navItems" :key="item.name" :href="item.href"
-               class="text-gray-600 hover:text-indigo-600 block px-3 py-2 rounded-md text-base font-medium"
-               :class="{ 'bg-indigo-100 text-indigo-700': item.current }"
+               class="text-gray-600 hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
+               :class="{ 'bg-primary/10 text-primary': item.current }"
             >
               {{ item.name }}
             </a>
-          </div>
-          <div class="pt-4 pb-3 border-t border-gray-200">
-            <button @click="requestDemo" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
-              REQUEST A DEMO
-            </button>
           </div>
         </div>
       </transition>
     </div>
   </header>
+  <ContactStrip/>
 </template>
 
 <script setup>
 import { ref } from 'vue';
-import { MenuIcon, XIcon } from 'lucide-vue-next';
+import { MenuIcon, XIcon, SearchIcon } from 'lucide-vue-next';
+import ContactStrip from './ContactStrip.vue';
 import logo from "@/assets/logo.svg";
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
 
 const navItems = [
+  { name: 'Home', href: '/', current: false },
+  { name: 'About Us', href: '/about', current: false },
   { name: 'Services', href: '/services', current: false },
-  { name: 'About', href: '/about', current: false },
-  { name: 'Contact', href: '/contact', current: false },
+  { name: 'Contact Us', href: '/contact', current: false },
 ];
 
 const isMobileMenuOpen = ref(false);
@@ -85,8 +83,8 @@ const toggleMobileMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value;
 };
 
-const requestDemo = () => {
-  router.push({name: 'contact'});
+const openSearch = () => {
+  console.log('Search clicked');
 };
 </script>
 

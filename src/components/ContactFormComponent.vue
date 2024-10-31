@@ -1,26 +1,26 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-purple-600 to-indigo-800 py-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+  <div class="min-h-screen bg-gradient-to-br from-[#90CAF9] to-[#64B5F6] py-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
     <div class="max-w-4xl w-full bg-white rounded-2xl shadow-2xl overflow-hidden">
       <div class="md:flex">
         <!-- Contact Information Section -->
-        <div class="md:w-1/3 bg-gradient-to-b from-indigo-600 to-purple-700 p-8 text-white">
+        <div class="md:w-1/3 bg-gradient-to-b from-[#90CAF9] to-[#42A5F5] p-8 text-white">
           <h2 class="text-3xl font-extrabold mb-6">Contact Us</h2>
-          <p class="mb-8 text-indigo-100">We'd love to hear from you. Fill out the form and we'll be in touch as soon as possible.</p>
+          <p class="mb-8 text-white">We'd love to hear from you. Fill out the form and we'll be in touch as soon as possible.</p>
           <div class="space-y-4">
             <div class="flex items-center">
               <UserIcon class="w-6 h-6 mr-4" />
               <div>
-                <p class="font-semibold">Chris Makau</p>
-                <p class="text-sm text-indigo-200">Chief Customer Relations Officer</p>
+                <p class="font-semibold">Sylivester Atuta</p>
+                <p class="text-sm text-white">Chief Excecutive Officer</p>
               </div>
             </div>
             <div class="flex items-center">
               <PhoneIcon class="w-6 h-6 mr-4" />
-              <p>(+2547) 25 863023</p>
+              <p>(+2547) 792 432401</p>
             </div>
             <div class="flex items-center">
               <MailIcon class="w-6 h-6 mr-4" />
-              <p>cmakau@treyonks.com</p>
+              <p>Sylivester.atuta254@gmail.com</p>
             </div>
           </div>
         </div>
@@ -55,7 +55,7 @@
             </div>
             <div>
               <button type="submit"
-                class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150 ease-in-out transform hover:scale-105"
+                class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primarycolor hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150 ease-in-out transform hover:scale-105"
               >
                 Send Message
               </button>
